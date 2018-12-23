@@ -1,0 +1,12 @@
+$color--grey: #565554;
+$color--green: #4C9F70;
+$color--khaki: #CCAD8F;
+$color--blue: #6279B8;
+$color--ceil: #8EA4D2;
+
+@font-face {
+    font-family: Steelfish;
+    font-weight: 600;
+    src: url(steelfish.ttf);
+}
+$main--font: Steelfish;

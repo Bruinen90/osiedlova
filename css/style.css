@@ -1,0 +1,169 @@
+@font-face {
+  font-family: Steelfish;
+  font-weight: 600;
+  src: url(steelfish.ttf);
+}
+body {
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  font-family: Steelfish;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+}
+
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cover--hidden {
+  display: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+.logo::after {
+  content: "A";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 80%;
+  height: 80%;
+  border: 1.5px solid black;
+  font-size: 52px;
+}
+
+.logo__caption {
+  font-size: 30px;
+  padding: 5%;
+}
+
+.logo__caption--white {
+  color: white;
+}
+
+.logo--white {
+  color: #fff;
+  border-color: #fff;
+}
+.logo--white::after {
+  border-color: #fff;
+}
+
+.logo--small {
+  width: 40px;
+  height: 40px;
+  border-width: 2px;
+}
+.logo--small::after {
+  border-width: 1px;
+  font-size: 26px;
+}
+
+.menuBar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  background-color: #565554;
+  z-index: 100;
+}
+
+.menuBar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  padding: 10px 20px;
+  background-color: #565554;
+}
+
+.menuBar__logoContainer {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.menuBar__menuToggler {
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menuBar__togglerBar {
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.menuBar__menuToggler--clicked .menuBar__togglerBar1 {
+  transform: rotate(-45deg) translateX(-1.5px);
+  transform-origin: 100% 0%;
+}
+
+.menuBar__menuToggler--clicked .menuBar__togglerBar2 {
+  opacity: 0;
+}
+
+.menuBar__menuToggler--clicked .menuBar__togglerBar3 {
+  transform: rotate(45deg) translateX(1.5px);
+  transform-origin: 100% 0%;
+}
+
+.menuBar__listContainer {
+  position: absolute;
+  top: 60px;
+  left: 0px;
+  width: 100%;
+  background-color: #565554;
+  color: #fff;
+  font-size: 26px;
+  border-top: 1px solid white;
+  z-index: -1;
+  transition: cubic-bezier(0.42, 0, 0.54, 1.82) 0.6s;
+}
+
+.menuBar__listContainer--hidden {
+  transform: translateY(-100%);
+}
+
+.menuBar__item {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */

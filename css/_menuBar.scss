@@ -1,0 +1,77 @@
+.menuBar {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    background-color: $color--grey;
+    z-index: 100;
+}
+
+.menuBar__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    padding: 10px 20px;
+    background-color: $color--grey;
+}
+
+.menuBar__logoContainer {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.menuBar__menuToggler {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menuBar__togglerBar {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all .3s;
+}
+
+.menuBar__menuToggler--clicked .menuBar__togglerBar1 {
+    transform: rotate(-45deg) translateX(-1.5px);
+    transform-origin: 100% 0%;
+}
+
+.menuBar__menuToggler--clicked .menuBar__togglerBar2 {
+    opacity: 0;
+}
+
+.menuBar__menuToggler--clicked .menuBar__togglerBar3 {
+    transform: rotate(45deg) translateX(1.5px);
+    transform-origin: 100% 0%;
+}
+
+.menuBar__listContainer {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    width: 100%;
+    // height: calc(100% - 60px);
+    background-color: $color--grey;
+    color: #fff;
+    font-size: 26px;
+    border-top: 1px solid white;
+    z-index: -1;
+    transition: cubic-bezier(0.42, 0, 0.54, 1.82) .6s;
+}
+
+.menuBar__listContainer--hidden {
+    transform: translateY(-100%);
+}
+
+.menuBar__item {
+    margin: 1rem 0;
+    width: 100%;
+}
