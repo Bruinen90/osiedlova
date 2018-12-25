@@ -45,3 +45,15 @@
         font-size: 26px;
     }
 }
+
+@media (min-width: $desktop--breakPoint) {
+    .logo--big {
+        width: 160px;
+        height: 160px;
+        border-width: 5px;
+        &::after {
+            border-width: 2px;
+            font-size: 100px;
+        }
+    }
+}

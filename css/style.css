@@ -12,11 +12,16 @@ body {
   font-family: Steelfish;
   letter-spacing: 1px;
   box-sizing: border-box;
+  color: white;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+  position: relative;
+}
+a:hover {
+  color: #CCAD8F;
 }
 
 ul {
@@ -41,6 +46,27 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+.button {
+  font-size: 20px;
+  background-color: #CCAD8F;
+  padding: 8px 40px;
+  border: 0;
+  margin: 0.5rem;
+  border-radius: 3px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.button--secondary {
+  color: #CCAD8F;
+  background-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .button {
+    font-size: 24px;
+    padding: 10px 35px;
+  }
+}
 .logo {
   display: flex;
   justify-content: center;
@@ -89,13 +115,26 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 26px;
 }
 
+@media (min-width: 768px) {
+  .logo--big {
+    width: 160px;
+    height: 160px;
+    border-width: 5px;
+  }
+  .logo--big::after {
+    border-width: 2px;
+    font-size: 100px;
+  }
+}
 .menuBar {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   width: 100%;
   height: 60px;
-  background-color: #565554;
+  background-color: #222;
   z-index: 100;
 }
 
@@ -106,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   max-width: 1440px;
   padding: 10px 20px;
-  background-color: #565554;
+  background-color: #222;
 }
 
 .menuBar__logoContainer {
@@ -146,24 +185,121 @@ h1, h2, h3, h4, h5, h6 {
 
 .menuBar__listContainer {
   position: absolute;
+  margin: 0;
   top: 60px;
   left: 0px;
   width: 100%;
-  background-color: #565554;
+  background-color: #222;
   color: #fff;
   font-size: 26px;
-  border-top: 1px solid white;
+  border-top: 1px solid #CCAD8F;
   z-index: -1;
   transition: cubic-bezier(0.42, 0, 0.54, 1.82) 0.6s;
 }
 
 .menuBar__listContainer--hidden {
-  transform: translateY(-100%);
+  transform: translateY(-100%) translateY(-60px);
 }
 
 .menuBar__item {
   margin: 1rem 0;
+}
+
+@media (min-width: 768px) {
+  .menuBar__menuToggler {
+    display: none;
+  }
+
+  .menuBar__listContainer {
+    position: static;
+    display: flex;
+    border: 0;
+    top: auto;
+    left: auto;
+    width: auto;
+    z-index: 0;
+  }
+
+  .menuBar__item {
+    height: auto;
+    margin: 0;
+    padding: 0 1rem;
+    border-right: 1px solid #CCAD8F;
+  }
+
+  .menuBar__item:last-child {
+    border-right-width: 0;
+  }
+
+  .menuBar__listContainer--hidden {
+    transform: none;
+  }
+}
+.welcomePage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  height: 100vh;
+  background: url("../img/pizza_on_black_bck.jpg") #222 no-repeat center/cover;
+  color: white;
+}
+
+.welcomePage::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.3);
+}
+
+.welcomePage__textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.welcomePage__companyName {
+  font-size: 72px;
+  letter-spacing: 6px;
+  margin: 1rem 0;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.welcomePage__slogan {
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+.welcomePage__sloganWord {
+  margin: 0;
+  font-size: 24px;
+  padding: 0 1rem;
+  border-right: 2px solid #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.welcomePage__sloganWord:last-child {
+  border-right-width: 0px;
+}
+
+.welcomePage__buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .welcomePage__companyName {
+    font-size: 100px;
+  }
+
+  .welcomePage__sloganWord {
+    font-size: 36px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

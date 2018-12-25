@@ -1,4 +1,4 @@
-$color--grey: #565554;
+$color--grey: #222;
 $color--green: #4C9F70;
 $color--khaki: #CCAD8F;
 $color--blue: #6279B8;
@@ -10,3 +10,7 @@ $color--ceil: #8EA4D2;
     src: url(steelfish.ttf);
 }
 $main--font: Steelfish;
+
+$desktop--breakPoint: 768px;
+
+$cubic--transition: cubic-bezier(0.42, 0, 0.54, 1.82);

@@ -1,5 +1,7 @@
 .menuBar {
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -55,23 +57,53 @@
 
 .menuBar__listContainer {
     position: absolute;
+    margin: 0;
     top: 60px;
     left: 0px;
     width: 100%;
-    // height: calc(100% - 60px);
     background-color: $color--grey;
     color: #fff;
     font-size: 26px;
-    border-top: 1px solid white;
+    border-top: 1px solid $color--khaki;
     z-index: -1;
-    transition: cubic-bezier(0.42, 0, 0.54, 1.82) .6s;
+    transition: $cubic--transition .6s;
 }
 
 .menuBar__listContainer--hidden {
-    transform: translateY(-100%);
+    transform: translateY(-100%) translateY(-60px);
 }
 
 .menuBar__item {
     margin: 1rem 0;
-    width: 100%;
+}
+
+@media (min-width: $desktop--breakPoint) {
+    .menuBar__menuToggler {
+        display: none;
+    }
+
+    .menuBar__listContainer {
+        position: static;
+        display: flex;
+        border: 0;
+        top: auto;
+        left: auto;
+        width: auto;
+        z-index: 0;
+    }
+
+    .menuBar__item {
+        height: auto;
+        margin: 0;
+        padding: 0 1rem;
+        border-right: 1px solid $color--khaki;
+    }
+
+    .menuBar__item:last-child {
+        border-right-width: 0;
+    }
+
+    .menuBar__listContainer--hidden {
+        transform: none;
+    }
 }
