@@ -21,7 +21,7 @@ a {
   position: relative;
 }
 a:hover {
-  color: #CCAD8F;
+  color: #c4a07d;
 }
 
 ul {
@@ -38,26 +38,42 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .cover--hidden {
   display: none;
 }
 
+.ionicIcon {
+  font-size: 36px;
+  color: inherit;
+  margin: 0.5rem;
+}
+
+.ionicIcon--blue {
+  color: #6279B8;
+}
+
+@media (min-width: 768px) {
+  .ionicIcon--big {
+    font-size: 60px;
+  }
+}
 .button {
   font-size: 20px;
-  background-color: #CCAD8F;
+  background-color: #4C9F70;
   padding: 8px 40px;
   border: 0;
   margin: 0.5rem;
   border-radius: 3px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  outline: none;
 }
 
 .button--secondary {
-  color: #CCAD8F;
+  color: #4C9F70;
   background-color: #fff;
 }
 
@@ -149,9 +165,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menuBar__logoContainer {
+  position: relative;
   display: flex;
   align-items: center;
+}
+
+.menuBar__mainPageLink {
+  position: absolute;
+  width: 100%;
   height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .menuBar__menuToggler {
@@ -192,7 +217,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #222;
   color: #fff;
   font-size: 26px;
-  border-top: 1px solid #CCAD8F;
+  border-top: 1px solid #c4a07d;
   z-index: -1;
   transition: cubic-bezier(0.42, 0, 0.54, 1.82) 0.6s;
 }
@@ -212,6 +237,7 @@ h1, h2, h3, h4, h5, h6 {
 
   .menuBar__listContainer {
     position: static;
+    transition: none;
     display: flex;
     border: 0;
     top: auto;
@@ -224,7 +250,7 @@ h1, h2, h3, h4, h5, h6 {
     height: auto;
     margin: 0;
     padding: 0 1rem;
-    border-right: 1px solid #CCAD8F;
+    border-right: 1px solid #c4a07d;
   }
 
   .menuBar__item:last-child {
@@ -233,6 +259,73 @@ h1, h2, h3, h4, h5, h6 {
 
   .menuBar__listContainer--hidden {
     transform: none;
+  }
+}
+.sectionHeader {
+  position: relative;
+  padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40vh;
+}
+.sectionHeader::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.4);
+}
+
+.sectionHeader__textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.sectionHeader__header {
+  font-size: 50px;
+  margin: 0;
+  margin-bottom: 3rem;
+  position: relative;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.sectionHeader__description {
+  display: none;
+}
+
+.sectionHeader--menuPage {
+  background: url("../img/two-pizzas.jpg") #222 no-repeat center/cover;
+}
+
+@media (min-width: 768px) {
+  .sectionHeader__header {
+    font-size: 100px;
+  }
+  .sectionHeader__header::after {
+    content: " ";
+    position: absolute;
+    bottom: -1.5rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    height: 3px;
+    background-color: #fff;
+  }
+
+  .sectionHeader__description {
+    display: block;
+    font-size: 36px;
+    margin: 0;
+    margin-bottom: 0.3rem;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
 }
 .welcomePage {
@@ -245,7 +338,6 @@ h1, h2, h3, h4, h5, h6 {
   background: url("../img/pizza_on_black_bck.jpg") #222 no-repeat center/cover;
   color: white;
 }
-
 .welcomePage::after {
   content: " ";
   position: absolute;
@@ -253,7 +345,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(34, 34, 34, 0.3);
+  background-color: rgba(34, 34, 34, 0.4);
 }
 
 .welcomePage__textContainer {
@@ -299,6 +391,143 @@ h1, h2, h3, h4, h5, h6 {
 
   .welcomePage__sloganWord {
     font-size: 36px;
+  }
+}
+.menuPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+  color: #222;
+}
+
+.menuPage__spacer {
+  width: 100%;
+  height: 160px;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-align: center;
+  padding: 24px;
+}
+
+.menuPage__categoriesContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.menuPage__categoryContainer {
+  width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+}
+.menuPage__categoryContainer:first-child {
+  border-top: 1px solid #e1e1e1;
+}
+
+.menuPage__categoryHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  height: 100px;
+}
+
+.menuPage__headerText {
+  color: #222;
+  font-size: 30px;
+  z-index: 2;
+}
+
+.menuPage__expandIcon {
+  position: absolute;
+  right: 30px;
+  border: 2px solid #a2a2a2;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  z-index: 2;
+}
+.menuPage__expandIcon::after {
+  content: " ";
+  position: absolute;
+  border: inherit;
+  border-left-width: 0;
+  border-top-width: 0;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  left: 7px;
+  top: 5px;
+  transition: cubic-bezier(0.42, 0, 0.54, 1.82) 0.6s;
+}
+
+@media (min-width: 768px) {
+  .menuPage__spacer {
+    font-size: 30px;
+  }
+
+  .menuPage__headerText {
+    font-size: 42px;
+  }
+
+  .menuPage__categoryHeader {
+    height: 160px;
+  }
+
+  .menuPage__categoryHeaderBck {
+    background-position: center -60px;
+    background-repeat: no-repeat;
+    transition: all 1s;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  .menuPage__categoryHeader:hover {
+    background-position: center;
+  }
+  .menuPage__categoryHeader:hover::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(34, 34, 34, 0.4);
+  }
+  .menuPage__categoryHeader:hover .menuPage__headerText {
+    color: #fff;
+  }
+  .menuPage__categoryHeader:hover .menuPage__expandIcon {
+    border-color: #fff;
+  }
+  .menuPage__categoryHeader:hover .menuPage__categoryHeaderBck {
+    opacity: 1;
+    background-position: center;
+  }
+  .menuPage__categoryHeader:hover .menuPage__categoryHeader--pizza {
+    background-image: url("../img/pizza_menu_bck.jpg");
+  }
+  .menuPage__categoryHeader:hover .menuPage__categoryHeader--pierogi {
+    background-image: url("../img/pierogi_menu_bck.jpg");
+  }
+  .menuPage__categoryHeader:hover .menuPage__categoryHeader--przekaski {
+    background-image: url("../img/calzone_menu_bck.jpg");
+  }
+  .menuPage__categoryHeader:hover .menuPage__categoryHeader--napoje {
+    background-image: url("../img/beverage_menu_bck.jpg");
   }
 }
 

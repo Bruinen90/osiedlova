@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Osiedlova - restauracja włoska, pizzeria. Kraków, ul. Orlińskiego 5.</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <div class="cover cover--hidden" onClick='toggleMenu()'></div>
+
+        <nav class="menuBar">
+            <div class="menuBar__container">
+                <div class="menuBar__logoContainer">
+                    <a href="./index.html" class="menuBar__mainPageLink"></a>
+                    <div class="logo logo--small logo--white"></div>
+                    <h1 class="logo__caption logo__caption--white">Osiedlova</h1>
+                </div>
+                <div class="menuBar__menuToggler" onClick='toggleMenu()'>
+                    <div class="menuBar__togglerBar menuBar__togglerBar1"></div>
+                    <div class="menuBar__togglerBar menuBar__togglerBar2"></div>
+                    <div class="menuBar__togglerBar menuBar__togglerBar3"></div>
+                </div>
+                <ul class="menuBar__listContainer menuBar__listContainer--hidden">
+                    <li class="menuBar__item">
+                        <a href="./menu.html" class="menuBar__link menuBar__item--active">Menu</a>
+                    </li>
+                    <li class="menuBar__item">
+                        <a href="./oferta.html" class="menuBar__link">Oferta</a>
+                    </li>
+                    <li class="menuBar__item">
+                        <a href="./o_nas.html" class="menuBar__link">O nas</a>
+                    </li>
+                    <li class="menuBar__item">
+                        <a href="./kontakt.html" class="menuBar__link">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="menuPage">
+
+            <div class="sectionHeader sectionHeader--menuPage">
+                <div class="sectionHeader__textContainer">
+                    <h1 class="sectionHeader__header">
+                        Nasze menu
+                    </h1>
+                    <h3 class="sectionHeader__description">
+                        Prawdziwa włoska pizza na wyciagnięcie ręki!
+                    </h3>
+                    <h3 class="sectionHeader__description">
+                        Najlepsze składniki na doskonałym cieście
+                    </h3>
+                </div>
+            </div>
+
+            <div class="menuPage__spacer">
+                Sprawdź koniecznie aktualne promocje oraz dania sezonowe na naszym facebookowym profilu
+                <a href="https://www.facebook.com/osiedlova/">
+                    <ion-icon name="logo-facebook" class="ionicIcon ionicIcon--blue ionicIcon--big"></ion-icon>
+                </a>
+            </div>
+
+            <article class="menuPage__categoriesContainer">
+                <div class="menuPage__categoryContainer">
+                    <div class="menuPage__categoryHeader">
+                        <div class="menuPage__categoryHeaderBck menuPage__categoryHeader--pizza"></div>
+                        <h2 class="menuPage__headerText">Pizza</h2>
+                        <div class="menuPage__expandIcon"></div>
+                    </div>
+                    <div class="menuPage__dishesContainer">
+                    </div>
+                </div>
+
+                <div class="menuPage__categoryContainer">
+                    <div class="menuPage__categoryHeader">
+                        <div class="menuPage__categoryHeaderBck menuPage__categoryHeader--pierogi"></div>
+                        <h2 class="menuPage__headerText">Pierogi</h2>
+                        <div class="menuPage__expandIcon"></div>
+                    </div>
+                    <div class="menuPage__dishesContainer">
+                    </div>
+                </div>
+
+                <div class="menuPage__categoryContainer">
+                    <div class="menuPage__categoryHeader">
+                        <div class="menuPage__categoryHeaderBck menuPage__categoryHeader--przekaski"></div>
+                        <h2 class="menuPage__headerText">Przekąski</h2>
+                        <div class="menuPage__expandIcon"></div>
+                    </div>
+                    <div class="menuPage__dishesContainer">
+                    </div>
+                </div>
+
+                <div class="menuPage__categoryContainer">
+                    <div class="menuPage__categoryHeader">
+                        <div class="menuPage__categoryHeaderBck menuPage__categoryHeader--napoje"></div>
+                        <h2 class="menuPage__headerText">Napoje</h2>
+                        <div class="menuPage__expandIcon"></div>
+                    </div>
+                    <div class="menuPage__dishesContainer">
+                    </div>
+                </div>
+            </article>
+
+        </section>
+
+        <script src="https://unpkg.com/ionicons@4.5.0/dist/ionicons.js"></script>
+        <script type="text/javascript" src="script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+.sectionHeader {
+    position: relative;
+    padding-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+    @include dark--cover;
+}
+
+.sectionHeader__textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.sectionHeader__header {
+    font-size: 50px;
+    margin: 0;
+    margin-bottom: 3rem;
+    position: relative;
+    text-shadow: 0 2px 10px rgba(0,0,0,.7);
+}
+
+.sectionHeader__description {
+    display: none;
+}
+
+
+.sectionHeader--menuPage {
+    background: url('../img/two-pizzas.jpg') $color--grey no-repeat center/cover;
+}
+
+@media (min-width: $desktop--breakPoint) {
+    .sectionHeader__header {
+        font-size: 100px;
+        &::after {
+            content: ' ';
+            position: absolute;
+            bottom: -1.5rem;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 50%;
+            height: 3px;
+            background-color: #fff;
+        }
+    }
+
+    .sectionHeader__description {
+        display: block;
+        font-size: 36px;
+        margin: 0;
+        margin-bottom: .3rem;
+        text-shadow: 0 0 5px rgba(0,0,0,.5);
+    }
+}

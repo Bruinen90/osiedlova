@@ -1,0 +1,15 @@
+.ionicIcon {
+    font-size: 36px;
+    color: inherit;
+    margin: .5rem;
+}
+
+.ionicIcon--blue {
+    color: $color--blue;
+}
+
+@media (min-width: $desktop--breakPoint) {
+    .ionicIcon--big {
+        font-size: 60px;
+    }
+}
