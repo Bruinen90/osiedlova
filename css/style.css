@@ -50,6 +50,16 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 36px;
   color: inherit;
   margin: 0.5rem;
+  filter: brightness(100%);
+}
+.ionicIcon:hover {
+  filter: brightness(110%);
+}
+
+.ionicIcon--menuIcon {
+  font-size: 20px;
+  color: #c4a07d;
+  margin-left: 2rem;
 }
 
 .ionicIcon--blue {
@@ -269,6 +279,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   width: 100%;
   height: 40vh;
+  background-attachment: fixed;
 }
 .sectionHeader::after {
   content: " ";
@@ -302,6 +313,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .sectionHeader--menuPage {
   background: url("../img/two-pizzas.jpg") #222 no-repeat center/cover;
+  background-attachment: fixed;
 }
 
 @media (min-width: 768px) {
@@ -433,18 +445,69 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .menuPage__categoryHeader {
+  color: #222;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   position: relative;
   height: 100px;
+  cursor: pointer;
+}
+
+.menuPage__categoryHeaderBck {
+  background-position: center -30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: all 1s;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.menuPage__categoryHeaderBck::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.4);
+}
+
+.menuPage__categoryHeader--active {
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.menuPage__categoryHeaderBck--pizza {
+  background-image: url("../img/pizza_menu_bck_mobile.jpg");
+}
+
+.menuPage__categoryHeaderBck--pierogi {
+  background-image: url("../img/pierogi_menu_bck_mobile.jpg");
+}
+
+.menuPage__categoryHeaderBck--snacks {
+  background-image: url("../img/calzone_menu_bck_mobile.jpg");
+}
+
+.menuPage__categoryHeaderBck--beverages {
+  background-image: url("../img/beverage_menu_bck_mobile.jpg");
+}
+
+.menuPage__categoryHeaderBck--show {
+  opacity: 1;
+  background-position: center 0px;
 }
 
 .menuPage__headerText {
-  color: #222;
+  color: inherit;
   font-size: 30px;
   z-index: 2;
+  text-shadow: inherit;
 }
 
 .menuPage__expandIcon {
@@ -467,7 +530,62 @@ h1, h2, h3, h4, h5, h6 {
   transform: rotate(45deg);
   left: 7px;
   top: 5px;
-  transition: cubic-bezier(0.42, 0, 0.54, 1.82) 0.6s;
+  transition: cubic-bezier(0.42, 0, 0.54, 1.82) 0.5s;
+}
+
+.menuPage__expandIcon--rotated {
+  border-color: #fff;
+}
+.menuPage__expandIcon--rotated::after {
+  top: 10px;
+  transform: rotate(225deg);
+}
+
+.menuPage__dishesContainer {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1440px;
+  transition: all 0.6s;
+  max-height: 1500px;
+  opacity: 1;
+}
+
+.menuPage__dishesContainer--hidden {
+  opacity: 0;
+  max-height: 0;
+}
+
+.menuPage__dishContainer {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+}
+
+.menuPage__dishNameContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #c4a07d;
+  margin-bottom: 1rem;
+}
+
+.menuPage__pizzaPrices {
+  display: flex;
+  align-items: center;
+}
+
+.menuPage__dishName, .menuPage__dishPrice {
+  font-size: 24px;
+  color: #c4a07d;
+  margin: 10px 0;
+}
+
+.menuPage__dishDescription {
+  font-size: 18px;
+  color: #222;
 }
 
 @media (min-width: 768px) {
@@ -483,29 +601,8 @@ h1, h2, h3, h4, h5, h6 {
     height: 160px;
   }
 
-  .menuPage__categoryHeaderBck {
-    background-position: center -60px;
-    background-repeat: no-repeat;
-    transition: all 1s;
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-  }
-
   .menuPage__categoryHeader:hover {
     background-position: center;
-  }
-  .menuPage__categoryHeader:hover::after {
-    content: " ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(34, 34, 34, 0.4);
   }
   .menuPage__categoryHeader:hover .menuPage__headerText {
     color: #fff;
@@ -517,17 +614,26 @@ h1, h2, h3, h4, h5, h6 {
     opacity: 1;
     background-position: center;
   }
-  .menuPage__categoryHeader:hover .menuPage__categoryHeader--pizza {
+
+  .menuPage__categoryHeaderBck--pizza {
     background-image: url("../img/pizza_menu_bck.jpg");
   }
-  .menuPage__categoryHeader:hover .menuPage__categoryHeader--pierogi {
+
+  .menuPage__categoryHeaderBck--pierogi {
     background-image: url("../img/pierogi_menu_bck.jpg");
   }
-  .menuPage__categoryHeader:hover .menuPage__categoryHeader--przekaski {
+
+  .menuPage__categoryHeaderBck--snacks {
     background-image: url("../img/calzone_menu_bck.jpg");
   }
-  .menuPage__categoryHeader:hover .menuPage__categoryHeader--napoje {
+
+  .menuPage__categoryHeaderBck--beverages {
     background-image: url("../img/beverage_menu_bck.jpg");
+  }
+
+  .menuPage__dishContainer {
+    width: 50%;
+    padding: 60px;
   }
 }
 

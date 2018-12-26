@@ -56,50 +56,50 @@
             </div>
 
             <div class="menuPage__spacer">
-                Sprawdź koniecznie aktualne promocje oraz dania sezonowe na naszym facebookowym profilu
+                Sprawdź aktualne promocje oraz dania sezonowe na naszym facebookowym profilu
                 <a href="https://www.facebook.com/osiedlova/">
                     <ion-icon name="logo-facebook" class="ionicIcon ionicIcon--blue ionicIcon--big"></ion-icon>
                 </a>
             </div>
 
             <article class="menuPage__categoriesContainer">
-                <div class="menuPage__categoryContainer">
-                    <div class="menuPage__categoryHeader">
-                        <div class="menuPage__categoryHeaderBck menuPage__categoryHeader--pizza"></div>
+                <div class="menuPage__categoryContainer" id="pizza">
+                    <div class="menuPage__categoryHeader" onClick="toggleDishesList('pizza')">
+                        <div class="menuPage__categoryHeaderBck menuPage__categoryHeaderBck--pizza"></div>
                         <h2 class="menuPage__headerText">Pizza</h2>
                         <div class="menuPage__expandIcon"></div>
                     </div>
-                    <div class="menuPage__dishesContainer">
+                    <div class="menuPage__dishesContainer menuPage__dishesContainer--hidden">
                     </div>
                 </div>
 
-                <div class="menuPage__categoryContainer">
-                    <div class="menuPage__categoryHeader">
-                        <div class="menuPage__categoryHeaderBck menuPage__categoryHeader--pierogi"></div>
+                <div class="menuPage__categoryContainer" id="pierogi">
+                    <div class="menuPage__categoryHeader" onClick="toggleDishesList('pierogi')">
+                        <div class="menuPage__categoryHeaderBck menuPage__categoryHeaderBck--pierogi"></div>
                         <h2 class="menuPage__headerText">Pierogi</h2>
                         <div class="menuPage__expandIcon"></div>
                     </div>
-                    <div class="menuPage__dishesContainer">
+                    <div class="menuPage__dishesContainer menuPage__dishesContainer--hidden">
                     </div>
                 </div>
 
-                <div class="menuPage__categoryContainer">
-                    <div class="menuPage__categoryHeader">
-                        <div class="menuPage__categoryHeaderBck menuPage__categoryHeader--przekaski"></div>
+                <div class="menuPage__categoryContainer" id="snacks">
+                    <div class="menuPage__categoryHeader" onClick="toggleDishesList('snacks')">
+                        <div class="menuPage__categoryHeaderBck menuPage__categoryHeaderBck--snacks"></div>
                         <h2 class="menuPage__headerText">Przekąski</h2>
                         <div class="menuPage__expandIcon"></div>
                     </div>
-                    <div class="menuPage__dishesContainer">
+                    <div class="menuPage__dishesContainer menuPage__dishesContainer--hidden">
                     </div>
                 </div>
 
-                <div class="menuPage__categoryContainer">
-                    <div class="menuPage__categoryHeader">
-                        <div class="menuPage__categoryHeaderBck menuPage__categoryHeader--napoje"></div>
+                <div class="menuPage__categoryContainer" id="beverages">
+                    <div class="menuPage__categoryHeader" onClick="toggleDishesList('beverages')">
+                        <div class="menuPage__categoryHeaderBck menuPage__categoryHeaderBck--beverages"></div>
                         <h2 class="menuPage__headerText">Napoje</h2>
                         <div class="menuPage__expandIcon"></div>
                     </div>
-                    <div class="menuPage__dishesContainer">
+                    <div class="menuPage__dishesContainer menuPage__dishesContainer--hidden">
                     </div>
                 </div>
             </article>

@@ -38,19 +38,61 @@
 }
 
 .menuPage__categoryHeader {
+    color: $color--grey;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     position: relative;
     height: 100px;
+    cursor: pointer;
+}
+
+.menuPage__categoryHeaderBck {
+    @include dark--cover;
+    background-position: center -30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 1s;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.menuPage__categoryHeader--active {
+    color: #fff;
+    text-shadow: 0 0 5px rgba(0,0,0,.5);
+}
+
+.menuPage__categoryHeaderBck--pizza {
+    background-image: url('../img/pizza_menu_bck_mobile.jpg');
+}
+.menuPage__categoryHeaderBck--pierogi {
+    background-image: url('../img/pierogi_menu_bck_mobile.jpg');
+}
+
+.menuPage__categoryHeaderBck--snacks {
+    background-image: url('../img/calzone_menu_bck_mobile.jpg');
+}
+
+.menuPage__categoryHeaderBck--beverages {
+    background-image: url('../img/beverage_menu_bck_mobile.jpg');
+}
+
+.menuPage__categoryHeaderBck--show {
+    opacity: 1;
+    background-position: center 0px;
 }
 
 
 .menuPage__headerText {
-    color: $color--grey;
+    color: inherit;
     font-size: 30px;
     z-index: 2;
+    text-shadow: inherit;
 }
 
 .menuPage__expandIcon {
@@ -72,8 +114,63 @@
         transform: rotate(45deg);
         left: 7px;
         top: 5px;
-        transition: $cubic--transition .6s;
+        transition: $cubic--transition .5s;
     }
+}
+
+.menuPage__expandIcon--rotated {
+    border-color: #fff;
+    &::after {
+        top: 10px;
+        transform: rotate(225deg);
+    }
+}
+
+.menuPage__dishesContainer {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1440px;
+    transition: all .6s;
+    max-height: 1500px;
+    opacity: 1;
+}
+
+.menuPage__dishesContainer--hidden {
+    opacity: 0;
+    max-height: 0;
+}
+
+.menuPage__dishContainer {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+}
+
+.menuPage__dishNameContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid $color--khaki;
+    margin-bottom: 1rem;
+}
+
+.menuPage__pizzaPrices {
+    display: flex;
+    align-items: center;
+}
+
+.menuPage__dishName, .menuPage__dishPrice {
+    font-size: 24px;
+    color: $color--khaki;;
+    margin: 10px 0;
+}
+
+.menuPage__dishDescription {
+    font-size: 18px;
+    color: $color--grey;
 }
 
 @media (min-width: $desktop--breakPoint) {
@@ -89,22 +186,8 @@
         height: 160px;
     }
 
-    .menuPage__categoryHeaderBck {
-        background-position: center -60px;
-        background-repeat: no-repeat;
-        transition: all 1s;
-        opacity: 0;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-    }
-
-
     .menuPage__categoryHeader:hover {
         background-position: center;
-        @include dark--cover;
         .menuPage__headerText {
             color: #fff;
         }
@@ -115,19 +198,25 @@
             opacity: 1;
             background-position: center;
         }
-        .menuPage__categoryHeader--pizza {
-            background-image: url('../img/pizza_menu_bck.jpg');
-        }
-        .menuPage__categoryHeader--pierogi {
-            background-image: url('../img/pierogi_menu_bck.jpg');
-        }
+    }
 
-        .menuPage__categoryHeader--przekaski {
-            background-image: url('../img/calzone_menu_bck.jpg');
-        }
+    .menuPage__categoryHeaderBck--pizza {
+        background-image: url('../img/pizza_menu_bck.jpg');
+    }
+    .menuPage__categoryHeaderBck--pierogi {
+        background-image: url('../img/pierogi_menu_bck.jpg');
+    }
 
-        .menuPage__categoryHeader--napoje {
-            background-image: url('../img/beverage_menu_bck.jpg');
-        }
+    .menuPage__categoryHeaderBck--snacks {
+        background-image: url('../img/calzone_menu_bck.jpg');
+    }
+
+    .menuPage__categoryHeaderBck--beverages {
+        background-image: url('../img/beverage_menu_bck.jpg');
+    }
+
+    .menuPage__dishContainer {
+        width: 50%;
+        padding: 60px;
     }
 }
