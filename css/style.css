@@ -62,6 +62,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-left: 2rem;
 }
 
+.ionicIcon--contactIcon {
+  color: #c4a07d;
+  font-size: 36px;
+}
+
 .ionicIcon--blue {
   color: #6279B8;
 }
@@ -80,6 +85,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 3px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
   outline: none;
+  cursor: pointer;
 }
 
 .button--secondary {
@@ -634,6 +640,57 @@ h1, h2, h3, h4, h5, h6 {
   .menuPage__dishContainer {
     width: 50%;
     padding: 60px;
+  }
+}
+.contactPage__mapContainer {
+  width: 100%;
+  height: 45vh;
+  background-color: #ccc;
+  margin-top: 60px;
+}
+
+.contactPage__contactDataContainer {
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contactPage__contactElement {
+  color: inherit;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.5rem 0;
+}
+
+.contactPage__contactElement--smallFont {
+  font-size: 20px;
+}
+
+.contactPage__companyName {
+  color: inherit;
+  margin: 0;
+  font-size: 28px;
+}
+
+@media (min-width: 768px) {
+  .contactPage__contactElement {
+    font-size: 30px;
+  }
+
+  .contactPage__contactElement--smallFont {
+    font-size: 24px;
+  }
+
+  .contactPage__companyName {
+    font-size: 40px;
+  }
+
+  .contactPage__phoneNumberLink {
+    display: none;
   }
 }
 

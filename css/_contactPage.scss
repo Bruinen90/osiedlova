@@ -1,0 +1,51 @@
+.contactPage__mapContainer {
+    width: 100%;
+    height: 45vh;
+    background-color: #ccc;
+    margin-top: 60px;
+}
+
+.contactPage__contactDataContainer {
+    color: $color--grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contactPage__contactElement {
+    color: inherit;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .5rem 0;
+}
+
+.contactPage__contactElement--smallFont {
+    font-size: 20px;
+}
+
+.contactPage__companyName {
+    color: inherit;
+    margin: 0;
+    font-size: 28px;
+}
+
+@media (min-width: $desktop--breakPoint) {
+    .contactPage__contactElement {
+        font-size: 30px;
+    }
+
+    .contactPage__contactElement--smallFont {
+        font-size: 24px;
+    }
+
+    .contactPage__companyName {
+        font-size: 40px;
+    }
+
+    .contactPage__phoneNumberLink {
+        display: none;
+    }
+}

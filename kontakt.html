@@ -24,7 +24,7 @@
                 </div>
                 <ul class="menuBar__listContainer menuBar__listContainer--hidden">
                     <li class="menuBar__item">
-                        <a href="./menu.html" class="menuBar__link">Menu</a>
+                        <a href="./menu.html" class="menuBar__link menuBar__item--active">Menu</a>
                     </li>
                     <li class="menuBar__item">
                         <a href="./oferta.html" class="menuBar__link">Oferta</a>
@@ -39,22 +39,38 @@
             </div>
         </nav>
 
-        <section class="welcomePage">
-            <div class="welcomePage__textContainer">
-                <div class="logo logo--white logo--big"></div>
-                <h1 class="welcomePage__companyName">Osiedlova</h1>
-                <div class="welcomePage__slogan">
-                    <h2 class="welcomePage__sloganWord">eat</h2>
-                    <h2 class="welcomePage__sloganWord">share</h2>
-                    <h2 class="welcomePage__sloganWord">enjoy</h2>
+        <section class="contactPage">
+            <div class="contactPage__mapContainer" id="map">
+            </div>
+            <div class="contactPage__contactDataContainer">
+                <div class="contactPage__contactElement contactPage__contactElement--smallFont">
+                    <ion-icon name="pin" class="ionicIcon ionicIcon--contactIcon"></ion-icon>
+                    <a
+                        href="https://www.google.com/maps/dir/?api=1&destination=QVB&destination_place_id=ChIJ4SvfG8tFFkcRSry7yQgtH1Q"
+                        target="_blank"
+                        title="Wyświetl wskazówki dojazdu"
+                    >
+                    <h3 class="contactPage__companyName">Osiedlova</h3>
+                    ul. Bolesława Orlińskiego 5<br/>
+                    31-878 Kraków
+                    </a>
                 </div>
-                <div class="welcomePage__buttons">
-                    <a href="./menu.html"><button class="button">Nasze menu</button></a>
-                    <button class="button button--secondary">Zamów</button>
+                <div class="contactPage__contactElement">
+                    <ion-icon name="call" class="ionicIcon ionicIcon--contactIcon"></ion-icon>
+                    <a href="tel: +48 793 111 700" class="contactPage__phoneNumberLink">+48 793 111 700</a>
+                    +48 793 111 700
+                </div>
+                <div class="contactPage__contactElement">
+                    <ion-icon name="logo-facebook" class="ionicIcon ionicIcon--contactIcon"></ion-icon>
+                    <a href="https://www.facebook.com/osiedlova">facebook.com/osiedlova</a>
                 </div>
             </div>
         </section>
 
+        <script src="https://unpkg.com/ionicons@4.5.0/dist/ionicons.js"></script>
         <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="maps.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo2SsZ8cEf6dwEyBxgrR0pXSpjtlqgiro&callback=initMap"
+    async defer></script>
     </body>
 </html>
