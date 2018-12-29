@@ -36,6 +36,11 @@
     background-attachment: fixed;
 }
 
+.sectionHeader--offerPage {
+    background: url('../img/offer_bck.jpg') $color--grey no-repeat center/cover;
+    background-attachment: fixed;
+}
+
 @media (min-width: $desktop--breakPoint) {
     .sectionHeader__header {
         font-size: 100px;

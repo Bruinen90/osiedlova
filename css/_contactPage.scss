@@ -32,6 +32,10 @@
     font-size: 28px;
 }
 
+.contactPage__phoneNumberLink--desktop {
+    display: none;
+}
+
 @media (min-width: $desktop--breakPoint) {
     .contactPage__contactElement {
         font-size: 30px;
@@ -45,7 +49,12 @@
         font-size: 40px;
     }
 
-    .contactPage__phoneNumberLink {
+    .contactPage__phoneNumber--mobile {
         display: none;
+    }
+
+    .contactPage__phoneNumberLink--desktop {
+        display: block;
+        color: $color--grey;
     }
 }

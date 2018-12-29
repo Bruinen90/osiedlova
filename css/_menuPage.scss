@@ -135,6 +135,7 @@
     transition: all .6s;
     max-height: 1500px;
     opacity: 1;
+    overflow: hidden;
 }
 
 .menuPage__dishesContainer--hidden {
@@ -145,7 +146,7 @@
 .menuPage__dishContainer {
     width: 100%;
     height: 100%;
-    padding: 30px;
+    padding: 20px 30px;
 }
 
 .menuPage__dishNameContainer {
@@ -163,7 +164,7 @@
 }
 
 .menuPage__dishName, .menuPage__dishPrice {
-    font-size: 24px;
+    font-size: 20px;
     color: $color--khaki;;
     margin: 10px 0;
 }
@@ -218,5 +219,9 @@
     .menuPage__dishContainer {
         width: 50%;
         padding: 60px;
+    }
+
+    .menuPage__dishName {
+        font-size: 24px;
     }
 }
