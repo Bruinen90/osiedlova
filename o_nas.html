@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Osiedlova - restauracja włoska, pizzeria. Kraków, ul. Orlińskiego 5.</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Thasadith" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="cover cover--hidden" onClick='toggleMenu()'></div>
+
+        <nav class="menuBar">
+            <div class="menuBar__container">
+                <div class="logo__container">
+                    <a href="./index.html" class="logo__mainPageLink"></a>
+                    <div class="logo logo--small logo--white"></div>
+                    <h1 class="logo__caption logo__caption--white">Osiedlova</h1>
+                </div>
+                <div class="menuBar__menuToggler" onClick='toggleMenu()'>
+                    <div class="menuBar__togglerBar menuBar__togglerBar1"></div>
+                    <div class="menuBar__togglerBar menuBar__togglerBar2"></div>
+                    <div class="menuBar__togglerBar menuBar__togglerBar3"></div>
+                </div>
+                <ul class="menuBar__listContainer menuBar__listContainer--hidden">
+                    <li class="menuBar__item">
+                        <a href="./menu.html" class="menuBar__link menuBar__item--active">Menu</a>
+                    </li>
+                    <li class="menuBar__item">
+                        <a href="./oferta.html" class="menuBar__link">Oferta</a>
+                    </li>
+                    <li class="menuBar__item">
+                        <a href="./o_nas.html" class="menuBar__link">O nas</a>
+                    </li>
+                    <li class="menuBar__item">
+                        <a href="./kontakt.html" class="menuBar__link">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <section class="aboutPage">
+            <div class="aboutPage__carouselContainer">
+                <div class="aboutPage__carouselItem aboutPage__carouselItem--eat">
+                    <h1 class="aboutPage__carouselCaption">Eat</h1>
+                </div>
+                <div class="aboutPage__carouselItem aboutPage__carouselItem--share">
+                    <h1 class="aboutPage__carouselCaption">Share</h1>
+                </div>
+                <div class="aboutPage__carouselItem aboutPage__carouselItem--love">
+                    <h1 class="aboutPage__carouselCaption">Love</h1>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://unpkg.com/ionicons@4.5.0/dist/ionicons.js"></script>
+        <script type="text/javascript" src="menuBar.js"></script>
+        <script type="text/javascript" src="about.js"></script>
+    </body>
+</html>

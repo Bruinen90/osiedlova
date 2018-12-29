@@ -838,4 +838,53 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #222;
 }
 
+.aboutPage__carouselContainer {
+  width: 100%;
+  height: 100vh;
+  background-color: #555;
+  overflow: hidden;
+  position: relative;
+}
+
+.aboutPage__carouselItem {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: linear 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutPage__carouselCaption {
+  font-size: 60px;
+  width: 100%;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.aboutPage__carouselItem--eat {
+  background-image: url("../img/restaurant.jpg");
+}
+
+.aboutPage__carouselItem--share {
+  background-image: url("../img/share.jpg");
+}
+
+.aboutPage__carouselItem--love {
+  background-image: url("../img/love.jpg");
+}
+
+@media (min-width: 768px) {
+  .aboutPage__carouselCaption {
+    font-size: 100px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
