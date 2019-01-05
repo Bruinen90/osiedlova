@@ -1,0 +1,18 @@
+.spacer {
+    font-size: 24px;
+    width: 100%;
+    height: 160px;
+    color: $color--grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+}
+
+@media (min-width: 768px) {
+    .spacer {
+        font-size: 28px;
+    }
+}

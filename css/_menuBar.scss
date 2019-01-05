@@ -71,6 +71,12 @@
     margin: 1rem 0;
 }
 
+.menuBar__link--current {
+    cursor: default;
+    color: $color--khaki;
+    pointer-events: none;
+}
+
 @media (min-width: $desktop--breakPoint) {
     .menuBar__menuToggler {
         display: none;
